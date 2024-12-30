@@ -1,0 +1,34 @@
+.bodypart
+{
+  width:100%;
+  text-align:center;
+}
+.bodypart2
+{
+  width:42%;
+  float:left;
+  border:0px solid green;
+  padding-top:8%;
+}
+
+table
+{
+
+  width:98%;
+  margin:0 auto auto;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+
+
+

@@ -1,0 +1,33 @@
+<div class="userbodypart">
+  Welcome <span style="color:SteelBlue">{{ user?.username }}</span>
+</div>
+
+<div class="bodypart">
+  <div class="bodypart2">
+    <h1>UPDATE ENTRY</h1>
+    <br />
+    <form (ngSubmit)="processentryupdate()">
+      <label>Date</label>
+      <input
+        type="text"
+        name="entrydate"
+        class="formcontrol"
+        [(ngModel)]="entrydate"
+        [readonly]="true"
+      /><br /><br />
+
+      <label>Description</label>
+      <textarea
+        rows="12"
+        cols="34"
+        name="description"
+        [(ngModel)]="description"
+        style="border:1px solid black"
+      ></textarea>
+      <input type="hidden" name="userid" [value]="user?.id" />
+      <input type="hidden" name="id" [value]="entry?.id" />
+      <br /><br />
+      <button type="submit">UPDATE ENTRY</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<html>
+<body>
+
+<div class="userbodypart">
+  Welcome <span style="color:SteelBlue">{{ user?.username }}</span>
+</div>
+
+<div class="bodypart">
+  <div class="bodypart2">
+    <h1>VIEW ENTRY</h1>
+    <br><br><br>
+    <table>
+      <tr>
+        <td><strong>Date:</strong></td>
+        <td>{{ entry?.entrydate | date: 'dd/MM/yyyy' }}</td>
+      </tr>
+      <tr>
+        <td><strong>Description:</strong></td>
+        <td>{{ entry?.description }}</td>
+      </tr>
+    </table>
+    <br><br>
+  </div>
+</div>
+</body>
+</html>

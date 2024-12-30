@@ -1,0 +1,21 @@
+.bodypart
+{
+  width:100%;
+  text-align:center;
+}
+
+.bodypart1
+{
+  width:42%;
+  float:right;
+  border:0px solid green;
+  align-items: center;
+}
+.userbodypart
+{
+  text-align:left;
+  font-size:25px;
+  font-weight:bold;
+  padding-left:8px;
+
+}

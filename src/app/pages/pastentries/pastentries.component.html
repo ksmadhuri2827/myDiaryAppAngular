@@ -1,0 +1,35 @@
+<div class="userbodypart">
+  Welcome <span style="color:SteelBlue">{{ user?.username }}</span>
+</div>
+
+<div class="bodypart">
+
+
+  <span class="heading">List of Past Entries</span>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Display message if no entries are available -->
+    <tr *ngIf="entrieslist?.length===0">
+      <td colspan="4" style="font-size:15px; color:green; text-align:center">
+        User has not added any diary entries till now.
+      </td>
+    </tr>
+
+    <!-- Loop through the entries list -->
+    <tr *ngFor="let entry of entrieslist">
+      <td>{{ entry.entrydate | date: 'dd/MM/yyyy' }}</td>
+      <td><a [routerLink]="['/dashboard/viewentry', entry.id]">View</a></td>
+      <td><a [routerLink]="['/dashboard/updateentry', entry.id]">Update</a></td>
+      <button type="button" (click)="deleteEntry(entry.id)" style="background-color: red; color: white;">DELETE ENTRY</button>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

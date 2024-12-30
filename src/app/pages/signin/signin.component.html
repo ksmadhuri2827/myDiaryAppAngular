@@ -1,0 +1,17 @@
+<div class="bodypart">
+  <div class="bodypart2">
+    <h1>LOGIN HERE</h1><br><br><br>
+    <form (ngSubmit)="login()">
+      <label>Username</label>
+      <input type="text" name="username" [(ngModel)]="username" class="formcontrol" required><br><br>
+
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="password" class="formcontrol" required><br><br>
+
+      <button type="submit">LOGIN</button>
+    </form>
+
+    <br><br>
+    New User? <a routerLink="/register">Register</a> here
+  </div>
+</div>
